@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<Button
+		android:id="@+id/btn_search_expand_filter"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginRight="16dp"
+		android:background="@android:color/transparent"
+		android:text="@string/label_search_filter"
+		android:textColor="@color/colorAccent"
+		app:layout_constraintEnd_toEndOf="parent" />
+
+	<android.support.v7.widget.RecyclerView
+		android:id="@+id/rv_search_lessons_list"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:layout_marginTop="48dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:listitem="@layout/row_offer" />
+
+	<ImageView
+		android:id="@+id/iv_no_lessons"
+		android:layout_width="0dp"
+		android:layout_height="100dp"
+		android:layout_marginBottom="16dp"
+		android:src="@drawable/ic_warning"
+		android:visibility="gone"
+		app:layout_constraintBottom_toTopOf="@id/tv_no_lessons"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_chainStyle="packed" />
+
+	<TextView
+		android:id="@+id/tv_no_lessons"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="16dp"
+		android:text="Brak zajęć dla podanych kryteriów"
+		android:textColor="@android:color/black"
+		android:textSize="20sp"
+		android:visibility="gone"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/iv_no_lessons" />
+
+	<include layout="@layout/layout_search_filters" />
+</android.support.constraint.ConstraintLayout>

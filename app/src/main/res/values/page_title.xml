@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="page_title_profile">Twój profil</string>
+	<string name="page_title_my_lessons">Moje zajęcia</string>
+	<string name="page_title_new_lesson">Nowy termin</string>
+	<string name="page_title_search_lessons">Wyszukiwarka zajęć</string>
+	<string name="page_title_offer_details">Szczegóły oferty</string>
+</resources>

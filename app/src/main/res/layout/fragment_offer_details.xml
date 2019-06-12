@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<android.support.constraint.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="16dp">
+
+		<ImageView
+			android:id="@+id/iv_offer_details_picture"
+			android:layout_width="150dp"
+			android:layout_height="150dp"
+			android:scaleType="centerCrop"
+			android:src="@drawable/ic_portrait"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<TextView
+			android:id="@+id/tv_offer_tutor_name"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:textSize="20sp"
+			android:textStyle="bold"
+			app:layout_constraintBottom_toTopOf="@id/tv_offer_details_city"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@id/iv_offer_details_picture"
+			app:layout_constraintTop_toTopOf="@id/iv_offer_details_picture"
+			app:layout_constraintVertical_chainStyle="packed"
+			tools:text="Jan kowalski" />
+
+		<TextView
+			android:id="@+id/tv_offer_details_city"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:textSize="18sp"
+			android:textStyle="bold"
+			app:layout_constraintBottom_toBottomOf="@id/iv_offer_details_picture"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@id/iv_offer_details_picture"
+			app:layout_constraintTop_toBottomOf="@id/tv_offer_tutor_name"
+			tools:text="Poznań" />
+
+		<TextView
+			android:id="@+id/tv_offer_details_description"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			android:gravity="center"
+			android:textSize="16sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/iv_offer_details_picture"
+			tools:text="@tools:sample/lorem" />
+
+		<TextView
+			android:id="@+id/tv_offer_details_label"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			android:text="Oferta"
+			android:textColor="@color/colorAccent"
+			android:textSize="20sp"
+			android:textStyle="bold"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/tv_offer_details_description" />
+
+		<TextView
+			android:id="@+id/tv_offer_details_date_from"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			android:layout_marginRight="8dp"
+			android:textColor="@color/colorAccent"
+			android:textSize="16sp"
+			android:textStyle="bold"
+			app:layout_constraintEnd_toStartOf="@id/tv_offer_details_date_separator"
+			app:layout_constraintHorizontal_chainStyle="packed"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/tv_offer_details_label"
+			tools:text="18-12-2018" />
+
+		<TextView
+			android:id="@+id/tv_offer_details_date_separator"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="-"
+			android:textSize="16sp"
+			app:layout_constraintBottom_toBottomOf="@id/tv_offer_details_date_from"
+			app:layout_constraintEnd_toStartOf="@id/tv_offer_details_date_to"
+			app:layout_constraintStart_toEndOf="@id/tv_offer_details_date_from"
+			app:layout_constraintTop_toTopOf="@id/tv_offer_details_date_from" />
+
+		<TextView
+			android:id="@+id/tv_offer_details_date_to"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="8dp"
+			android:layout_marginTop="16dp"
+			android:textColor="@color/colorAccent"
+			android:textSize="16sp"
+			android:textStyle="bold"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@id/tv_offer_details_date_separator"
+			app:layout_constraintTop_toBottomOf="@id/tv_offer_details_label"
+			tools:text="20-12-2019" />
+
+		<TextView
+			android:id="@+id/tv_offer_details_pricing_subject"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			android:gravity="center"
+			android:text="Przedmiot"
+			android:textSize="16sp"
+			android:textStyle="bold"
+			app:layout_constraintEnd_toStartOf="@id/tv_offer_details_level"
+			app:layout_constraintHorizontal_weight="@dimen/offer_details_subject_weight"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/tv_offer_details_date_to" />
+
+		<TextView
+			android:id="@+id/tv_offer_details_level"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+
+			android:gravity="center"
+			android:text="Poziom"
+			android:textSize="16sp"
+			android:textStyle="bold"
+
+			app:layout_constraintEnd_toStartOf="@id/tv_offer_details_pricing_price"
+			app:layout_constraintHorizontal_weight="@dimen/offer_details_level_weight"
+			app:layout_constraintStart_toEndOf="@id/tv_offer_details_pricing_subject"
+			app:layout_constraintTop_toBottomOf="@id/tv_offer_details_date_to" />
+
+		<TextView
+			android:id="@+id/tv_offer_details_pricing_price"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			android:gravity="center"
+			android:text="Stawka"
+
+			android:textSize="16sp"
+			android:textStyle="bold"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_weight="@dimen/offer_details_price_weight"
+			app:layout_constraintStart_toEndOf="@id/tv_offer_details_level"
+			app:layout_constraintTop_toBottomOf="@id/tv_offer_details_date_to" />
+
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/rv_offer_details_pricing"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:nestedScrollingEnabled="false"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/tv_offer_details_pricing_price"
+			tools:listitem="@layout/row_pricing" />
+
+		<TextView
+			android:id="@+id/tv_offer_details_other_label"
+			android:layout_width="wrap_content"
+			android:layout_height="48dp"
+			android:layout_marginTop="16dp"
+			android:gravity="center"
+			android:text="Późniejsze terminy"
+			android:textColor="@color/colorAccent"
+			android:textSize="20sp"
+			android:textStyle="bold"
+			app:layout_constraintTop_toBottomOf="@id/rv_offer_details_pricing" />
+
+		<Button
+			android:id="@+id/btn_offer_details_calendar"
+			android:layout_width="wrap_content"
+			android:layout_height="0dp"
+			android:background="@android:color/transparent"
+			android:text="Zobacz cały kalendarz"
+			android:textSize="12sp"
+			app:layout_constraintBottom_toBottomOf="@id/tv_offer_details_other_label"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="@id/tv_offer_details_other_label" />
+
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/rv_offer_details_other"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/tv_offer_details_other_label"
+			tools:listitem="@layout/row_other_offer" />
+
+		<Button
+			android:id="@+id/btn_offer_details_sign"
+			style="@style/AppTheme.ButtonAccent"
+			android:layout_width="200dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			android:text="Zapisz się"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/rv_offer_details_other" />
+	</android.support.constraint.ConstraintLayout>
+</ScrollView>

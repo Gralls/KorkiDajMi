@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@android:color/white"
+	android:padding="16dp">
+
+
+	<TextView
+		android:id="@+id/tv_create_lesson_date_label"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="48dp"
+		android:text="@string/label_date"
+		android:textSize="20sp"
+		app:layout_constraintEnd_toStartOf="@id/tv_create_lesson_date"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+		android:id="@+id/tv_create_lesson_date"
+		android:layout_width="wrap_content"
+		android:layout_height="48dp"
+		android:layout_marginLeft="8dp"
+		android:gravity="center"
+		android:textColor="@color/colorAccent"
+		android:textSize="16sp"
+		app:layout_constraintBottom_toBottomOf="@id/tv_create_lesson_date_label"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@id/tv_create_lesson_date_label"
+		app:layout_constraintTop_toTopOf="@id/tv_create_lesson_date_label" />
+
+	<TextView
+		android:id="@+id/tv_create_lesson_time_from_label"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="32dp"
+		android:text="@string/label_time_from"
+		android:textSize="20sp"
+
+		app:layout_constraintEnd_toStartOf="@id/tv_create_lesson_time_from"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/tv_create_lesson_date_label" />
+
+
+	<TextView
+		android:id="@+id/tv_create_lesson_time_from"
+		android:layout_width="wrap_content"
+		android:layout_height="48dp"
+		android:layout_marginLeft="8dp"
+		android:gravity="center"
+		android:textColor="@color/colorAccent"
+		android:textSize="16sp"
+		app:layout_constraintBottom_toBottomOf="@id/tv_create_lesson_time_from_label"
+		app:layout_constraintEnd_toStartOf="@id/tv_create_lesson_time_to_label"
+		app:layout_constraintStart_toEndOf="@id/tv_create_lesson_time_from_label"
+		app:layout_constraintTop_toTopOf="@id/tv_create_lesson_time_from_label" />
+
+	<TextView
+		android:id="@+id/tv_create_lesson_time_to_label"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="8dp"
+		android:text="@string/label_time_to"
+		android:textSize="20sp"
+
+		app:layout_constraintEnd_toStartOf="@id/tv_create_lesson_time_to"
+		app:layout_constraintStart_toEndOf="@id/tv_create_lesson_time_from"
+		app:layout_constraintTop_toTopOf="@id/tv_create_lesson_time_from_label" />
+
+	<TextView
+		android:id="@+id/tv_create_lesson_time_to"
+		android:layout_width="wrap_content"
+		android:layout_height="48dp"
+		android:layout_marginLeft="8dp"
+		android:gravity="center"
+		android:textColor="@color/colorAccent"
+		android:textSize="16sp"
+		app:layout_constraintBottom_toBottomOf="@id/tv_create_lesson_time_from_label"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@id/tv_create_lesson_time_to_label"
+		app:layout_constraintTop_toTopOf="@id/tv_create_lesson_time_from_label" />
+
+	<EditText
+		android:id="@+id/et_create_lesson_price"
+		android:layout_width="200dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="32dp"
+		android:gravity="center"
+		android:hint="Stawka godzinowa"
+		android:inputType="numberDecimal"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/tv_create_lesson_time_from_label" />
+
+	<CheckBox
+		android:id="@+id/cb_create_lesson_place"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="32dp"
+		android:text="Dojazd do studenta"
+		app:layout_constraintEnd_toStartOf="@id/cb_create_lesson_cyclic"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/et_create_lesson_price" />
+
+	<CheckBox
+		android:id="@+id/cb_create_lesson_cyclic"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:text="Zajęcia się powtarzają?"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@id/cb_create_lesson_place"
+		app:layout_constraintTop_toTopOf="@id/cb_create_lesson_place" />
+
+
+	<Button
+		android:id="@+id/btn_create_lesson_submit"
+		style="@style/AppTheme.ButtonAccent"
+		android:layout_width="200dp"
+		android:layout_height="wrap_content"
+		android:text="Dodaj"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,15 @@
+<resources>
+	<dimen name="fab_margin">16dp</dimen>
+	<item name="offer_details_price_weight"
+		format="float"
+		type="dimen">1
+	</item>
+	<item name="offer_details_level_weight"
+		format="float"
+		type="dimen">2
+	</item>
+	<item name="offer_details_subject_weight"
+		format="float"
+		type="dimen">2
+	</item>
+</resources>

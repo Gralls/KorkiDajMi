@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="label_login_no_account">Nie masz konta?</string>
+	<string name="label_login">Zaloguj</string>
+	<string name="label_register">Utwórz konto</string>
+	<string name="label_nav_header_welcome">Witaj</string>
+	<string name="label_register_is_coach">Jestem korepetytorem</string>
+	<string name="label_profile_new_subject">Dodaj przedmiot</string>
+	<string name="label_profile_submit">Zapisz zmiany</string>
+	<string name="label_date">Data:</string>
+	<string name="label_time_from">Od:</string>
+	<string name="label_time_to">Do:</string>
+	<string name="label_subject">Przedmiot:</string>
+	<string name="label_search_filter">Filtruj</string>
+</resources>

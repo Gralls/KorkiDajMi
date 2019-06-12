@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<android.support.constraint.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="16dp">
+
+		<ImageView
+			android:id="@+id/iv_profile_picture"
+			android:layout_width="150dp"
+			android:layout_height="150dp"
+			android:scaleType="centerCrop"
+			android:src="@drawable/ic_add_a_photo"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<TextView
+			android:id="@+id/tv_profile_email"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="48dp"
+			android:textSize="16sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/iv_profile_picture" />
+
+		<android.support.design.widget.TextInputLayout
+			android:id="@+id/til_profile_first_name"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			app:errorEnabled="true"
+			app:hintEnabled="true"
+			app:layout_constraintEnd_toStartOf="@id/til_profile_last_name"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/tv_profile_email">
+
+			<EditText
+				android:id="@+id/et_profile_first_name"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="@string/hint_first_name"
+				android:inputType="textPersonName"
+				android:lines="1"
+				android:padding="16dp" />
+		</android.support.design.widget.TextInputLayout>
+
+		<android.support.design.widget.TextInputLayout
+			android:id="@+id/til_profile_last_name"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			app:errorEnabled="true"
+			app:hintEnabled="true"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@id/til_profile_first_name"
+			app:layout_constraintTop_toTopOf="@id/til_profile_first_name">
+
+			<EditText
+				android:id="@+id/et_profile_last_name"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="@string/hint_last_name"
+				android:inputType="textPersonName"
+				android:lines="1"
+				android:padding="16dp" />
+		</android.support.design.widget.TextInputLayout>
+
+		<android.support.design.widget.TextInputLayout
+			android:id="@+id/til_profile_city"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			app:errorEnabled="true"
+			app:hintEnabled="true"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/til_profile_first_name">
+
+			<EditText
+				android:id="@+id/et_profile_city"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="@string/hint_city"
+				android:inputType="textPersonName"
+				android:lines="1"
+				android:padding="16dp" />
+		</android.support.design.widget.TextInputLayout>
+
+		<android.support.design.widget.TextInputLayout
+			android:id="@+id/til_profile_address"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			app:errorEnabled="true"
+			app:hintEnabled="true"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/til_profile_city">
+
+			<EditText
+				android:id="@+id/et_profile_address"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="@string/hint_address"
+				android:inputType="textPersonName"
+				android:lines="1"
+				android:padding="16dp" />
+		</android.support.design.widget.TextInputLayout>
+
+		<android.support.design.widget.TextInputLayout
+			android:id="@+id/til_profile_description"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			app:errorEnabled="true"
+			app:hintEnabled="true"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/til_profile_address">
+
+			<EditText
+				android:id="@+id/et_profile_description"
+				android:layout_width="match_parent"
+				android:layout_height="100dp"
+				android:gravity="top"
+				android:hint="@string/hint_description"
+				android:inputType="textPersonName"
+				android:padding="16dp" />
+		</android.support.design.widget.TextInputLayout>
+
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/rv_profile_subjects"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			android:nestedScrollingEnabled="false"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/til_profile_description"
+			tools:listitem="@layout/row_subject" />
+
+		<Button
+			android:id="@+id/btn_profile_new_subject"
+			style="@style/AppTheme.ButtonAccent"
+			android:layout_width="200dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			android:text="@string/label_profile_new_subject"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/rv_profile_subjects" />
+
+		<Button
+			android:id="@+id/btn_profile_submit"
+			style="@style/AppTheme.ButtonPrimary"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="48dp"
+			android:text="@string/label_profile_submit"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/btn_profile_new_subject" />
+	</android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

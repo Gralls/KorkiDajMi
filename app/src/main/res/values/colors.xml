@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="colorPrimary">#283593</color>
+	<color name="colorPrimaryDark">#001064</color>
+	<color name="colorPrimaryLight">#5f5fc4</color>
+	<color name="colorAccent">#303f9f</color>
+	<color name="freeEventColor">#9fb4ff</color>
+	<color name="occupiedEventColor">#70b979</color>
+	<color name="lightSubjectBackgroundColor">#88a2ff</color>
+	<color name="darkSubjectBackgroundColor">#6f8eff</color>
+	<color name="acceptSubmissionColor">#18ba1b</color>
+	<color name="rejectSubmissionColor">#ba2b18</color>
+</resources>

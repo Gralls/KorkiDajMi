@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="net_error_invalid_login_data">Podane dane są niepoprawne</string>
+	<string name="net_error_service_unavailable">Serwis chwilowo niedostępny</string>
+	<string name="net_error_no_internet_connection">Brak połączenia z internetem</string>
+</resources>

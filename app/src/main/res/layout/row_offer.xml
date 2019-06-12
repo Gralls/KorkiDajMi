@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	app:cardCornerRadius="16dp"
+	app:cardElevation="8dp"
+	app:cardUseCompatPadding="true"
+	tools:cardBackgroundColor="@color/colorAccent">
+
+	<android.support.constraint.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="16dp">
+
+		<TextView
+			android:id="@+id/tv_row_lesson_address"
+			style="@style/AppTheme.LessonTextHeader"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:text="Dąbrowskiego 18 Poznań" />
+
+		<TextView
+			android:id="@+id/tv_row_lesson_date_label"
+			style="@style/AppTheme.LessonTextLabel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			android:text="@string/label_date"
+
+			app:layout_constraintTop_toBottomOf="@id/tv_row_lesson_address" />
+
+		<TextView
+			android:id="@+id/tv_row_lesson_date"
+			style="@style/AppTheme.LessonTextBase"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="8dp"
+			app:layout_constraintStart_toEndOf="@id/tv_row_lesson_date_label"
+			app:layout_constraintTop_toTopOf="@id/tv_row_lesson_date_label"
+			tools:text="2018-04-02" />
+
+
+		<TextView
+			android:id="@+id/tv_row_lesson_time_from_label"
+			style="@style/AppTheme.LessonTextLabel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			android:text="@string/label_time_from"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/tv_row_lesson_date" />
+
+		<TextView
+			android:id="@+id/tv_row_lesson_time_from"
+			style="@style/AppTheme.LessonTextBase"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="8dp"
+			android:layout_marginTop="16dp"
+			app:layout_constraintStart_toEndOf="@id/tv_row_lesson_time_from_label"
+			app:layout_constraintTop_toBottomOf="@id/tv_row_lesson_date"
+			tools:text="15:30" />
+
+		<TextView
+			android:id="@+id/tv_row_lesson_time_to_label"
+			style="@style/AppTheme.LessonTextLabel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="8dp"
+			android:layout_marginTop="16dp"
+			android:text="@string/label_time_to"
+
+			app:layout_constraintStart_toEndOf="@id/tv_row_lesson_time_from"
+			app:layout_constraintTop_toBottomOf="@id/tv_row_lesson_date" />
+
+		<TextView
+			android:id="@+id/tv_row_lesson_time_to"
+			style="@style/AppTheme.LessonTextBase"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="8dp"
+			android:layout_marginTop="16dp"
+			app:layout_constraintStart_toEndOf="@id/tv_row_lesson_time_to_label"
+			app:layout_constraintTop_toBottomOf="@id/tv_row_lesson_date"
+			tools:text="17:30" />
+
+		<TextView
+			android:id="@+id/tv_row_lesson_pricing_label"
+			style="@style/AppTheme.LessonTextLabel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="8dp"
+			android:text="@string/label_offer_pricing"
+			app:layout_constraintEnd_toStartOf="@id/tv_row_lesson_pricing"
+			app:layout_constraintTop_toTopOf="@id/tv_row_lesson_date_label" />
+
+		<TextView
+			android:id="@+id/tv_row_lesson_pricing"
+			style="@style/AppTheme.LessonTextLabel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="@id/tv_row_lesson_date_label"
+			tools:text="24 zł/h" />
+	</android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

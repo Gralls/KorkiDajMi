@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/fl_search_filter_container"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:visibility="invisible">
+
+	<android.support.constraint.ConstraintLayout
+		android:id="@+id/cl_search_filter_container"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/bottom_rounded_background"
+		android:clickable="true"
+		android:elevation="8dp"
+		android:focusable="true"
+		android:focusableInTouchMode="true">
+
+		<TextView
+			android:id="@+id/tv_search_date_label"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="16dp"
+			android:text="@string/label_date"
+			app:layout_constraintBottom_toBottomOf="@id/btn_search_date"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="@id/btn_search_date" />
+
+		<Button
+			android:id="@+id/btn_search_date"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="16dp"
+			android:background="@android:color/transparent"
+			android:drawableEnd="@drawable/ic_calendar"
+			android:drawablePadding="8dp"
+			android:drawableTint="@color/colorAccent"
+			android:padding="8dp"
+			app:layout_constraintStart_toEndOf="@id/tv_search_date_label"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:text="12-12-2019" />
+
+		<android.support.design.widget.TextInputLayout
+			android:id="@+id/til_search_price_from"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			app:hintEnabled="true"
+			app:layout_constraintEnd_toStartOf="@id/til_search_price_to"
+			app:layout_constraintStart_toStartOf="@id/tv_search_date_label"
+			app:layout_constraintTop_toBottomOf="@id/btn_search_date">
+
+			<EditText
+				android:id="@+id/et_search_price_from"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:hint="Minimalna stawka"
+				android:inputType="numberDecimal" />
+		</android.support.design.widget.TextInputLayout>
+
+		<android.support.design.widget.TextInputLayout
+			android:id="@+id/til_search_price_to"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="16dp"
+			app:hintEnabled="true"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@id/til_search_price_from"
+			app:layout_constraintTop_toTopOf="@id/til_search_price_from">
+
+			<EditText
+				android:id="@+id/et_search_price_to"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:digits="0123456789"
+				android:gravity="center"
+				android:hint="Maksymalna stawka"
+				android:inputType="number" />
+		</android.support.design.widget.TextInputLayout>
+
+		<Button
+			android:id="@+id/btn_search_filter"
+			style="@style/AppTheme.ButtonWhiteBlue"
+			android:layout_width="100dp"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="16dp"
+			android:layout_marginBottom="16dp"
+			android:text="@string/label_search_filter"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/til_search_price_to" />
+
+
+	</android.support.constraint.ConstraintLayout>
+</FrameLayout>

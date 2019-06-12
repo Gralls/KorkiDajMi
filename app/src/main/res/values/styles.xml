@@ -1,0 +1,98 @@
+<resources>
+
+	<style name="AppTheme"
+		parent="Theme.AppCompat.Light.NoActionBar">
+		<!-- Customize your theme here. -->
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="android:windowBackground">@android:color/white</item>
+	</style>
+
+	<style name="AppTheme.NoActionBar">
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+	</style>
+
+	<style name="AppTheme.AppBarOverlay"
+		parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+	<style name="AppTheme.PopupOverlay"
+		parent="ThemeOverlay.AppCompat.Light" />
+
+	<style name="AppTheme.ButtonsColored"
+		parent="Widget.AppCompat.Button.Colored">
+		<item name="android:textSize">18sp</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="android:padding">5dp</item>
+		<item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
+	</style>
+
+	<style name="AppTheme.ButtonAccent"
+		parent="AppTheme.ButtonsColored">
+		<item name="android:background">@drawable/buttons_accent_background</item>
+		<item name="android:textColor">@android:color/white</item>
+	</style>
+
+	<style name="AppTheme.ButtonWhiteBlue"
+		parent="AppTheme.ButtonsColored">
+		<item name="android:background">@drawable/buttons_white_blue_background</item>
+		<item name="android:textColor">@color/colorPrimary</item>
+	</style>
+
+	<style name="AppTheme.ButtonPrimary"
+		parent="AppTheme.ButtonsColored">
+		<item name="android:background">@drawable/buttons_primary_background</item>
+	</style>
+
+	<style name="AppTheme.ButtonRejectSubmission"
+		parent="AppTheme.ButtonsColored">
+		<item name="android:background">@drawable/button_reject_submission_background</item>
+	</style>
+
+	<style name="AppTheme.ButtonAcceptSubmission"
+		parent="AppTheme.ButtonsColored">
+		<item name="android:background">@drawable/button_accept_submission_background</item>
+	</style>
+
+	<style name="AppTheme.ButtonWhite"
+		parent="AppTheme.ButtonsColored">
+		<item name="android:background">@drawable/buttons_white_background</item>
+		<item name="android:textColor">@android:color/secondary_text_light</item>
+	</style>
+
+	<style name="AppTheme.CopyrightLabel"
+		parent="android:Widget.TextView">
+		<item name="android:textColor">@android:color/white</item>
+		<item name="android:textSize">12sp</item>
+	</style>
+
+	<style name="AppTheme.SubmissionText"
+		parent="android:Widget.TextView">
+		<item name="android:textColor">@color/colorAccent</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+
+	<style name="Toolbar.TitleText"
+		parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+		<item name="textAllCaps">true</item>
+		<item name="android:textAllCaps">true</item>
+	</style>
+
+	<style name="AppTheme.LessonTextBase"
+		parent="TextAppearance.AppCompat.Medium">
+		<item name="android:textColor">@android:color/white</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+
+	<style name="AppTheme.LessonTextHeader"
+		parent="AppTheme.LessonTextBase">
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">20sp</item>
+	</style>
+
+	<style name="AppTheme.LessonTextLabel"
+		parent="AppTheme.LessonTextBase">
+		<item name="android:textStyle">bold</item>
+	</style>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<group android:checkableBehavior="single">
+		<item
+			android:id="@+id/menu_profile"
+			android:icon="@drawable/ic_person"
+			android:title="@string/menu_title_profile" />
+		<item
+			android:id="@+id/menu_calendar"
+			android:icon="@drawable/ic_calendar"
+			android:title="@string/page_title_my_lessons" />
+		<item
+			android:id="@+id/menu_search"
+			android:icon="@drawable/ic_search"
+			android:title="@string/page_title_search_lessons" />
+		<item
+			android:id="@+id/menu_add_lesson"
+			android:icon="@drawable/ic_create"
+			android:title="@string/page_title_new_lesson" />
+		<item
+			android:id="@+id/menu_logout"
+			android:icon="@drawable/ic_logout"
+			android:title="@string/menu_title_logout" />
+	</group>
+</menu>

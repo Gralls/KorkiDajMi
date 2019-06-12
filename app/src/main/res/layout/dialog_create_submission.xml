@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<android.support.constraint.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="16dp">
+
+		<TextView
+			android:id="@+id/tv_create_submission_title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="Wybierz przedmiot, na który chcesz się się zapisać"
+			android:textColor="@color/colorAccent"
+			android:textSize="18sp"
+			android:textStyle="bold"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<TextView
+			android:id="@+id/tv_create_submission_pricing_subject"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			android:gravity="center"
+			android:text="Przedmiot"
+			android:textSize="16sp"
+			android:textStyle="bold"
+			app:layout_constraintEnd_toStartOf="@id/tv_create_submission_level"
+			app:layout_constraintHorizontal_weight="@dimen/offer_details_subject_weight"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/tv_create_submission_title" />
+
+		<TextView
+			android:id="@+id/tv_create_submission_level"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+
+			android:gravity="center"
+			android:text="Poziom"
+			android:textSize="16sp"
+			android:textStyle="bold"
+
+			app:layout_constraintEnd_toStartOf="@id/tv_create_submission_pricing_price"
+			app:layout_constraintHorizontal_weight="@dimen/offer_details_level_weight"
+			app:layout_constraintStart_toEndOf="@id/tv_create_submission_pricing_subject"
+			app:layout_constraintTop_toBottomOf="@id/tv_create_submission_title" />
+
+		<TextView
+			android:id="@+id/tv_create_submission_pricing_price"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			android:gravity="center"
+			android:text="Stawka"
+
+			android:textSize="16sp"
+			android:textStyle="bold"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_weight="@dimen/offer_details_price_weight"
+			app:layout_constraintStart_toEndOf="@id/tv_create_submission_level"
+			app:layout_constraintTop_toBottomOf="@id/tv_create_submission_title" />
+
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/rv_create_submission_pricing"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:layout_marginBottom="16dp"
+			android:nestedScrollingEnabled="false"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/tv_create_submission_pricing_price"
+			tools:listitem="@layout/row_pricing" />
+	</android.support.constraint.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="error_invalid_email">Niepoprawny adres email</string>
+	<string name="error_required_field">To pole jest wymagane</string>
+	<string name="error_different_passwords">Hasła nie są takie same</string>
+	<string name="error_password_length">Hasło musi mieć przynajmniej 8 znaków</string>
+</resources>

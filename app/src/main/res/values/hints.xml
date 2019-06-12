@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hint_email">Adres e-mail</string>
+	<string name="hint_password">Hasło</string>
+	<string name="hint_password_repeat">Powtórz hasło</string>
+	<string name="hint_first_name">Imię</string>
+	<string name="hint_last_name">Nazwisko</string>
+	<string name="hint_city">Miasto</string>
+	<string name="hint_address">Adres</string>
+	<string name="hint_description">Opis</string>
+	<string name="hint_lessons_calendar_view">Widok kalendarza</string>
+	<string name="hint_lessons_list_view">Widok listy</string>
+</resources>

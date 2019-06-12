@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:elevation="8dp"
+	app:cardCornerRadius="8dp"
+	app:cardUseCompatPadding="true">
+
+	<android.support.constraint.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="16dp">
+
+		<ImageButton
+			android:id="@+id/ibtn_submission_accept"
+			style="@style/AppTheme.ButtonAcceptSubmission"
+			android:layout_width="48dp"
+			android:layout_height="48dp"
+			android:src="@drawable/ic_check"
+			app:layout_constraintBottom_toTopOf="@id/ibtn_submission_reject"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<ImageButton
+			android:id="@+id/ibtn_submission_reject"
+			style="@style/AppTheme.ButtonRejectSubmission"
+			android:layout_width="48dp"
+			android:layout_height="48dp"
+			android:layout_marginTop="8dp"
+			android:layout_marginBottom="8dp"
+			android:src="@drawable/ic_remove"
+			android:tint="@android:color/white"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/ibtn_submission_accept" />
+
+
+		<TextView
+			android:id="@+id/tv_submission_date"
+			style="@style/AppTheme.SubmissionText"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="8dp"
+			android:gravity="right"
+			android:textStyle="bold"
+
+			app:layout_constraintEnd_toStartOf="@id/tv_submission_time"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:text="20-12-2018" />
+
+		<TextView
+			android:id="@+id/tv_submission_time"
+			style="@style/AppTheme.SubmissionText"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="8dp"
+			android:textStyle="bold"
+			app:layout_constraintEnd_toStartOf="@id/ibtn_submission_accept"
+			app:layout_constraintStart_toEndOf="@id/tv_submission_date"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:text="20:20 - 21:20" />
+
+		<TextView
+			android:id="@+id/tv_submission_price"
+			style="@style/AppTheme.SubmissionText"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="8dp"
+			android:gravity="center"
+			android:textStyle="bold"
+			app:layout_constraintEnd_toStartOf="@id/ibtn_submission_accept"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/tv_submission_time"
+			tools:text="26 zł/h" />
+
+		<TextView
+			android:id="@+id/tv_submission_subject"
+			style="@style/AppTheme.SubmissionText"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="5dp"
+			app:layout_constraintEnd_toStartOf="@id/ibtn_submission_accept"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/tv_submission_price"
+			tools:text="Matematyka" />
+
+		<TextView
+			android:id="@+id/tv_submission_level"
+			style="@style/AppTheme.SubmissionText"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="8dp"
+			app:layout_constraintEnd_toStartOf="@id/ibtn_submission_accept"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/tv_submission_subject"
+			tools:text="Podstawówka" />
+
+
+		<TextView
+			android:id="@+id/tv_submission_place"
+			style="@style/AppTheme.SubmissionText"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="8dp"
+			app:layout_constraintEnd_toStartOf="@id/ibtn_submission_accept"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/tv_submission_level"
+			tools:text="Dąbrowskiego 20 Poznań" />
+
+
+	</android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
